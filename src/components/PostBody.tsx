@@ -4,6 +4,8 @@ import remarkMath from 'remark-math';
 import rehypeKatex from 'rehype-katex';
 import rehypeReact from 'rehype-react'; // 新增
 import rehypeRaw from 'rehype-raw';
+import remarkGfm from 'remark-gfm'
+
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { docco } from 'react-syntax-highlighter/dist/cjs/styles/hljs';
 import markdownStyles from './markdown-styles.module.css'
@@ -33,7 +35,7 @@ const PostBody: React.FC<MarkdownProps> = ({ slug,content }) => {
     <div className="flex justify-center">
     <div className={`${markdownStyles.markdown} w-1/2`}>
         <ReactMarkdown 
-        remarkPlugins={[remarkMath]} 
+        remarkPlugins={[remarkMath,remarkGfm]} 
         rehypePlugins={[rehypeKatex]}
         transformImageUri={uri =>
             uri.startsWith("http") ? uri : `${"/images/"}${slug}/${uri}`
