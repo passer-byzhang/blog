@@ -53,11 +53,11 @@ export default function PostsList({ posts }:{posts:Post[]} ): JSX.Element {
           {groupedArticles.map(({ year, month, articles }) => (
             <div key={`${year}-${month}`}>
               <h2 className="text-xl font-bold mb-4">{`${month} / ${year}`}</h2>
-              <ul className="space-y-4">
+              <ul className="space-y-6">
                 {articles.map((article) => (
                   <li key={article.title}>
-                    <Link href={`/posts/${article.slug}`} className="text-xxl font-semibold hover:underline">{article.title}</Link>
-                    <p className="font-semibold mt-2">{article.description}</p>
+                    <Link href={`/posts/${article.slug}`} className="text-xl font-semibold hover:underline">{article.title}</Link>
+                    <div className="text-sm font-medium mt-1">{article.description}</div>
                   </li>
                 ))}
               </ul>
