@@ -1,6 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@import url('https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.css');
+
 :root {
   --max-width: 1100px;
   --border-radius: 12px;
@@ -43,7 +46,7 @@
   --card-border-rgb: 131, 134, 135;
 }
 
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: light) {
   :root {
     --foreground-rgb: 214, 219, 220; /* 修改为浅灰色文本颜色 */
     --background-start-rgb: 34, 34, 34; /* 修改为深灰色背景 */
@@ -103,8 +106,8 @@ a {
   text-decoration: none;
 }
 
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: light) {
   html {
-    color-scheme: dark;
+    color-scheme: light;
   }
 }

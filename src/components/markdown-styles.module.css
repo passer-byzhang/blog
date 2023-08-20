@@ -1,0 +1,31 @@
+
+.markdown {
+    @apply text-lg leading-relaxed;
+  }
+  
+  .markdown p,
+  .markdown ul,
+  .markdown ol,
+  .markdown blockquote {
+    @apply my-6;
+  }
+  
+  .markdown h2 {
+    @apply text-2xl mt-12 mb-4 leading-snug;
+  }
+  
+  .markdown h3 {
+    @apply text-xl mt-8 mb-4 leading-snug;
+  }
+
+  .markdown pre {
+    @apply p-4 my-6 bg-gray-200 rounded-md; /* Add styles for background and padding */
+    max-width: 100%; /* Allow code block to take full width */
+    overflow-x: auto; /* Enable horizontal scrolling when content overflows */
+    word-wrap: normal; /* Prevent word wrapping within code block */
+  }
+  
+  /* Adjust the styles for inline code */
+  .markdown code {
+    @apply bg-gray-200 px-2 py-1 rounded-md; /* Add styles for inline code */
+  }

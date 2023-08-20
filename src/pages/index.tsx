@@ -8,6 +8,7 @@ const inter = Inter({ subsets: ['latin'] })
 import { getAllPosts } from '../lib/api'
 import Post from '../interfaces/post'
 
+
 type Props = {
   allPosts: Post[]
   //allPosts: string[]
@@ -31,6 +32,7 @@ export const getStaticProps = async () => {
     'date',
     'slug',
     'description',
+    'content'
   ])
   return {
     props: {allPosts: JSON.parse(JSON.stringify(allPosts)) },

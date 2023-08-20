@@ -12,7 +12,6 @@ function groupArticlesByMonth(articles: Post[]): GroupedArticles[] {
   const grouped: { [year: string]: { [month: string]: Post[] } } = {};
 
   for (const article of articles) {
-    console.log("date: "+ article.date);
     const [year, month] = article.date.split('-');
     if (!grouped[year]) {
       grouped[year] = {};
@@ -34,9 +33,16 @@ function groupArticlesByMonth(articles: Post[]): GroupedArticles[] {
     }
   }
 
-  return result;
+  return result.sort(compareGroupedArticles);
 }
 
+function compareGroupedArticles(a:GroupedArticles, b:GroupedArticles) {
+  if (a.year !== b.year) {
+    return Number(b.year) - Number(a.year); // Sort by year in descending order
+  } else {
+    return Number(b.month) - Number(a.month); // Sort by month in descending order
+  }
+}
 export default function PostsList({ posts }:{posts:Post[]} ): JSX.Element {
   const groupedArticles: GroupedArticles[] = groupArticlesByMonth(posts);
 
@@ -50,7 +56,7 @@ export default function PostsList({ posts }:{posts:Post[]} ): JSX.Element {
               <ul className="space-y-4">
                 {articles.map((article) => (
                   <li key={article.title}>
-                    <Link as={`/posts/${article.slug}`} href="/posts/[slug]" className="text-xxl font-semibold hover:underline">{article.title}</Link>
+                    <Link href={`/posts/${article.slug}`} className="text-xxl font-semibold hover:underline">{article.title}</Link>
                     <p className="font-semibold mt-2">{article.description}</p>
                   </li>
                 ))}
