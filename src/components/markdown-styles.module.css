@@ -3,7 +3,12 @@
     @apply text-lg leading-relaxed;
   }
   
-  .markdown p,
+  .markdown p {
+    max-width: 100%;
+    word-wrap: break-word; /* Allow long words to break onto the next line */
+    overflow-wrap: break-word; /* Handle overflow for non-long words */
+  }
+
   .markdown ul,
   .markdown ol,
   .markdown blockquote {
@@ -19,17 +24,22 @@
   }
 
   .markdown pre {
-    @apply p-4 my-6 bg-gray-200 rounded-md; /* Add styles for background and padding */
+    @apply p-4 my-6 bg-gray-100 rounded-md; /* Add styles for background and padding */
     max-width: 100%; /* Allow code block to take full width */
     overflow-x: auto; /* Enable horizontal scrolling when content overflows */
     word-wrap: normal; /* Prevent word wrapping within code block */
+    white-space: pre-wrap; /* Preserve line breaks and spaces */
   }
   
   /* Adjust the styles for inline code */
   .markdown code {
-    @apply bg-gray-200 px-2 py-1 rounded-md; /* Add styles for inline code */
+    @apply bg-gray-100 px-2 py-1 rounded-md; /* Add styles for inline code */
   }
 
+  .markdown img{
+    @apply mt-10 mb-10;
+  }
+  
   /* markdown-styles.module.css */
 
 /* 给表格整体添加边框和间距 */
@@ -58,3 +68,11 @@
     background-color: #f5f5f5;
   }
   
+  /* 其他样式 */
+.gist-embed {
+    border: 1px solid #ddd;
+    width: 100%;
+    max-width: 100%;
+    margin: 16px 0;
+  }
+

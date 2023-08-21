@@ -1,7 +1,7 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub, faTwitter, faDiscord,faTelegram } from '@fortawesome/free-brands-svg-icons';
-
+import {faEnvelopesBulk} from "@fortawesome/free-solid-svg-icons"
 const ContactButtons: React.FC = () => {
   return (
     <div className="flex space-x-4">
@@ -11,10 +11,10 @@ const ContactButtons: React.FC = () => {
       <a href="https://twitter.com/your-twitter" target="_blank" rel="noopener noreferrer">
         <FontAwesomeIcon icon={faTwitter} size="sm" />
       </a>
-      <a href="https://discord.com/your-discord" target="_blank" rel="noopener noreferrer">
-        <FontAwesomeIcon icon={faDiscord} size="sm" />
+      <a href="mailto: 19970216zhang@gamil.com" target="_blank" rel="noopener noreferrer">
+        <FontAwesomeIcon icon={faEnvelopesBulk} size="sm"/>
       </a>
-      <a href="https://discord.com/your-discord" target="_blank" rel="noopener noreferrer">
+      <a href="https://t.me/AlvanZhang" target="_blank" rel="noopener noreferrer">
         <FontAwesomeIcon icon={faTelegram} size="sm" />
       </a>
     </div>

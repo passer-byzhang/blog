@@ -1,7 +1,6 @@
 import Post from '../../interfaces/post'
 import PostBody from '@/components/PostBody'
 import PostHead from '@/components/PostHead'
-import Markdown from '@/components/Markdown'
 import { useRouter } from 'next/router'
 import { getPostBySlug, getAllPosts } from '../../lib/api'
 import { useEffect,useState } from 'react'
