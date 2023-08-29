@@ -32,8 +32,9 @@ export const getStaticProps = async () => {
     'date',
     'slug',
     'description',
-    'content'
-  ])
+    'content',
+    'tags'
+  ])  
   return {
     props: {allPosts: JSON.parse(JSON.stringify(allPosts)) },
   }

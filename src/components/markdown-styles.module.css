@@ -9,7 +9,10 @@
   .markdown blockquote {
     @apply my-6;
   }
-  
+  .markdown a {
+    color: rgb(51, 51, 194);
+    text-decoration: none;
+  }
   .markdown h2 {
     @apply text-2xl mt-12 mb-4 leading-snug;
   }
@@ -70,4 +73,5 @@
     max-width: 100%;
     margin: 16px 0;
   }
+
 

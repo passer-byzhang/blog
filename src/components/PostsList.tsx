@@ -1,7 +1,7 @@
 import React from 'react';
-import Post from '../interfaces/post'
+import Post,{getTagsArray} from '../interfaces/post'
 import Link from 'next/link'
-
+import PostPreview from './PostPreview';
 interface GroupedArticles {
   year: string;
   month: string;
@@ -56,8 +56,7 @@ export default function PostsList({ posts }:{posts:Post[]} ): JSX.Element {
               <ul className="space-y-6">
                 {articles.map((article) => (
                   <li key={article.title}>
-                    <Link href={`/posts/${article.slug}`} className="text-xl font-semibold hover:underline font-mono">{article.title}</Link>
-                    <div className="text-sm font-medium mt-1 font-mono">{article.description}</div>
+                    <PostPreview {...article} />
                   </li>
                 ))}
               </ul>
