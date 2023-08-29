@@ -6,7 +6,25 @@ module.exports = {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        mono: [
+          "ui-monospace",
+          "Menlo",
+          "Monaco",
+          "Cascadia Mono",
+          "Segoe UI Mono",
+          "Roboto Mono",
+          "Oxygen Mono",
+          "Ubuntu Monospace",
+          "Source Code Pro",
+          "Fira Mono",
+          "Droid Sans Mono",
+          "Courier New",
+          "monospace",
+        ],
+      },
+    },
   },
   plugins: [],
 };

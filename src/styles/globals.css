@@ -111,3 +111,10 @@ a {
     color-scheme: light;
   }
 }
+
+.divider {
+  content: '';
+  width: 2px;
+  background-color: #4e4b4b; /* 设置分割线的颜色 */
+  margin: 0 10px; /* 调整分割线与组件之间的间距 */
+}

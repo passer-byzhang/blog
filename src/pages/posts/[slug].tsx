@@ -4,15 +4,18 @@ import PostHead from '@/components/PostHead'
 import { useRouter } from 'next/router'
 import { getPostBySlug, getAllPosts } from '../../lib/api'
 import { useEffect,useState } from 'react'
-
+import Layout from '../../components/Layout'
 
 export default function Artical({post}:{post:Post}){
 
     return (
-              <div className="flex flex-col items-center">
+      <Layout>
+            <div className="flex flex-col items-center">
                 <PostHead title={post.title}/>
                     <PostBody slug={post.slug} content={post.content} />
             </div>
+      </Layout>
+
     ) 
 }
 

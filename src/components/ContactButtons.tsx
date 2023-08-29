@@ -8,7 +8,7 @@ const ContactButtons: React.FC = () => {
       <a href="https://github.com/passer-byzhang" target="_blank" rel="noopener noreferrer">
         <FontAwesomeIcon icon={faGithub} size="sm" />
       </a>
-      <a href="https://twitter.com/your-twitter" target="_blank" rel="noopener noreferrer">
+      <a href="https://twitter.com/idokidokidok" target="_blank" rel="noopener noreferrer">
         <FontAwesomeIcon icon={faTwitter} size="sm" />
       </a>
       <a href="mailto: 19970216zhang@gamil.com" target="_blank" rel="noopener noreferrer">

@@ -1,16 +1,11 @@
 import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGithub, faTwitter, faDiscord } from '@fortawesome/free-brands-svg-icons';
-import styles from './Footer.module.css';
-
-
-// Return the current time
 
 const Footer: React.FC = () => {
   return (
-    <footer>
-        
-
+    <footer className="bg-gray-900 text-white py-4 mt-20">
+      <div className="container mx-auto text-center">
+        <p>&copy; 2023 Your Website. All rights reserved.</p>
+      </div>
     </footer>
   );
 };
