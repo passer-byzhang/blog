@@ -2,7 +2,7 @@
 import Image from "next/image"
 import AlvanImage from '../public/images/Alvan.jpg'
 import ContactButtons from "./ContactButtons"
-export default function Alvan(){
+export default function Avator(){
     //console.log("path: "+ JSON.stringify(AlvanImage))
     return(
         <div id="Alvan" className="flex justify-center justify-center items-center mt-20">
@@ -16,4 +16,8 @@ export default function Alvan(){
     )
 
 
+}
+
+export function SideAvator(){
+    
 }
