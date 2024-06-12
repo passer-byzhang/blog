@@ -10,7 +10,7 @@ export default function Artical({post}:{post:Post}){
 
     return (
       <Layout>
-            <div className="flex flex-col items-center">
+            <div className="flex flex-col items-center mt-20">
                 <PostHead title={post.title}/>
                     <PostBody slug={post.slug} content={post.content} />
             </div>

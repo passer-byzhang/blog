@@ -28,7 +28,7 @@ const Markdown: React.FC<MarkdownProps> = ({ content }) => {
   };
 
   return (
-    <div className="flex justify-center">
+    <div className="flex justify-center w-1/2">
     <div
       className={`${markdownStyles.markdown} w-1/2`}
       dangerouslySetInnerHTML={{ __html: renderMarkdown() }}
